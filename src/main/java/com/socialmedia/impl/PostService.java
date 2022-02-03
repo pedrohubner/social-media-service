@@ -21,7 +21,7 @@ import java.util.stream.StreamSupport;
 @AllArgsConstructor
 public class PostService {
     private final PostRepository repository;
-    private final PostExceptionHandling exceptionHandling;
+//    private final PostExceptionHandling exceptionHandling;
 
     @CachePut(value = "posts", key = "T(org.springframework.cache.interceptor.SimpleKey).EMPTY")
     public List<PostResponse> createPost(PostRequest postRequest) {
@@ -32,7 +32,7 @@ public class PostService {
     @Cacheable(value = "posts", key = "#id")
     public PostResponse getPostById(Integer id) {
         return repository.findById(id)
-                .orElseThrow(exceptionHandling::buildPostNotFoundException);
+                .orElseThrow(null);
     }
 
     @Cacheable(value = "posts")

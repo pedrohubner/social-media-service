@@ -1,5 +1,6 @@
 package com.socialmedia.impl;
 
+import com.socialmedia.common.exception.PostExceptionHandling;
 import com.socialmedia.common.model.request.PostRequest;
 import com.socialmedia.common.model.response.PostResponse;
 import com.socialmedia.impl.mapper.PostResponseMapper;
@@ -20,6 +21,7 @@ import java.util.stream.StreamSupport;
 @AllArgsConstructor
 public class PostService {
     private final PostRepository repository;
+    private final PostExceptionHandling exceptionHandling;
 
     @CachePut(value = "posts", key = "T(org.springframework.cache.interceptor.SimpleKey).EMPTY")
     public List<PostResponse> createPost(PostRequest postRequest) {
@@ -30,7 +32,7 @@ public class PostService {
     @Cacheable(value = "posts", key = "#id")
     public PostResponse getPostById(Integer id) {
         return repository.findById(id)
-                .orElseThrow(null);
+                .orElseThrow(exceptionHandling::buildPostNotFoundException);
     }
 
     @Cacheable(value = "posts")

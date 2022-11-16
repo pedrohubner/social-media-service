@@ -20,7 +20,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class PostResponse implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String author;
     @JsonFormat(pattern = "YYYY-MM-dd HH:mm")

@@ -1,8 +1,0 @@
-{
-  "properties": [
-    {
-      "name": "error.suggestion.post-not-found",
-      "type": "java.lang.String",
-      "description": "Description for error.suggestion.post-not-found."
-  }
-] }

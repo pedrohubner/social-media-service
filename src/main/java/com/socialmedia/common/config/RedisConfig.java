@@ -25,7 +25,6 @@ public class RedisConfig {
         return redisTemplate;
     }
 
-    //cache size
     @Bean
     public RedisCacheConfiguration cacheConfiguration() {
         return RedisCacheConfiguration.defaultCacheConfig()

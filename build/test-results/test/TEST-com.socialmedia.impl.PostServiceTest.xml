@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.socialmedia.impl.PostServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-02-06T12:01:25" hostname="MacBook-Pro-de-Pedro.local" time="0.737">
+<testsuite name="com.socialmedia.impl.PostServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-02-05T21:15:22" hostname="MacBook-Pro-de-Pedro.local" time="0.291">
   <properties/>
-  <testcase name="shouldDeletePost()" classname="com.socialmedia.impl.PostServiceTest" time="0.737"/>
+  <testcase name="shouldDeletePost()" classname="com.socialmedia.impl.PostServiceTest" time="0.291"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
